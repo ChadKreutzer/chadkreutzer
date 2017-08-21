@@ -6,8 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var sassMiddleware = require('node-sass-middleware');
 var hbs = require('hbs');
-var marked = require("marked");
-var fs = require('fs');
+var markdown = require('./public/javascripts/helpers');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -18,12 +17,10 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
-hbs.registerHelper('md', function(file) {
-  const mdFile = __dirname + "/public/markdown/" + file + ".md";
-  const contents = fs.readFileSync(mdFile, 'utf8');
-
-  return new hbs.SafeString(marked(contents));
-});
+hbs.registerHelper('md', markdown({
+    path: '/public/markdown',
+    ext: '.md'
+  }));
 
 hbs.registerPartials(__dirname + '/views/partials');
 
