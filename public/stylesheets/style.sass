@@ -1,6 +1,29 @@
-body
-  padding: 50px
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
+@import normalize
 
-a
-  color: #00B7FF
+=full-background 
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  background-attachment: fixed
+  height: 50vh
+  display: flex
+  justify-content: center
+  align-items: center
+
+#home,
+#goodbye
+  background-image: url('/images/me_at_table_mountain.jpg')
+  +full-background
+  height: 100vh
+
+#about
+  background-image: url('/images/yellow_grate.jpg')
+  +full-background
+
+#portfolio
+  background-image: url('/images/mecha_needle.jpg')
+  +full-background
+
+#contact
+  background-image: url('/images/union_station.jpg')
+  +full-background
