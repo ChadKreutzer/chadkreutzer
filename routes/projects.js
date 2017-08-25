@@ -2,20 +2,43 @@ var express = require('express');
 var router = express.Router();
 
 const projects = [{
-        name: 'bs-calc',
+        route: 'bs-calc',
+        link: 'projects/bs-calc',
         title: 'Bootstrap Calculator'
     },
     {
-        name: 'random-quotes',
+        route: 'random-quotes',
+        link: 'projects/random-quotes',
         title: 'Random Quote Machine'
+    },
+    {
+        route: 'wikiview',
+        link: 'projects/wikiview',
+        title: 'Wikipedia Viewer'
+    },
+    {
+        route: 'pomodoro',
+        link: 'projects/pomodoro',
+        title: 'Pomodoro Clock'
+    },
+    {
+        route: 'widdle-waskles',
+        link: 'projects/widdle-waskles',
+        title: 'Widdle Waskles Grooming'
     }
 ];
 
+const header = {
+    home: '/../#home',
+    about: '/../#about',
+    portfolio: '/../#portfolio',
+    contact: '/../#contact'
+};
 /* GET projects. */
 
 projects.forEach(project => {
-    router.get('/' + project.name, function(req, res, next) {
-        res.render(`projects${project.name}`, { title: project.title });
+    router.get('/' + project.route, function(req, res, next) {
+        res.render(project.link, { title: project.title, header });
     });
 });
 
