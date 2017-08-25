@@ -389,18 +389,23 @@ template {
 [hidden] {
   display: none; }
 
-#home,
-#goodbye {
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.75); }
+
+#home {
   background-image: url("/images/me_at_table_mountain.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   height: 50vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; }
+  height: 75vh; }
+
+#home-body {
+  height: 25vh; }
 
 #about {
   background-image: url("/images/yellow_grate.jpg");
@@ -408,10 +413,10 @@ template {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  height: 50vh;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+  height: 50vh; }
+
+#pup-and-me {
+  float: right; }
 
 #portfolio {
   background-image: url("/images/mecha_needle.jpg");
@@ -420,9 +425,7 @@ template {
   background-position: center;
   background-attachment: fixed;
   height: 50vh;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+  clear: right; }
 
 #contact {
   background-image: url("/images/union_station.jpg");
@@ -430,9 +433,15 @@ template {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
+  height: 50vh; }
+
+#goodbye {
+  background-image: url("/images/me_at_table_mountain.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
   height: 50vh;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+  height: 100vh; }
 
 /*# sourceMappingURL=style.css.map */
