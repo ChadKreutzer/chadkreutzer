@@ -1,16 +1,13 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const header = require('../public/javascripts/header');
+const projects = require('../public/javascripts/projects');
 
-const header = {
-    home: '#home',
-    about: '#about',
-    portfolio: '#portfolio',
-    contact: '#contact'
-};
+const links = header();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('index', { title: 'Chad Kreutzer', header });
+    res.render('index', { title: 'Chad Kreutzer', links, projects });
 });
 
 module.exports = router;

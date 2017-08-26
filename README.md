@@ -13,4 +13,4 @@ The current site is built using Sinatra
 ## Planned changes from current site (besides node and express):
 
 * Find node replacement for Jekyll for the blog
-* Host static projects locally
+* ~~Host static projects locally~~ **DONE**

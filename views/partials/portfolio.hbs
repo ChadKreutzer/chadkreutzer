@@ -4,6 +4,17 @@
 <div id="portfolio-body">
   <h3>All of them made by hand with pride</h3>
   <ul>
-    {{!-- loop for projects --}}
+    {{#each projects}}
+    <li>
+      <h4>{{title}}</h4>
+      <a href={{link}}><img src="images/{{link}}.jpg" alt={{title}}></a>
+      <br>
+      {{#each tools}}
+        <button>{{this}}</button>
+      {{/each}}
+      <p>{{description}}</p>
+      <a href={{github}}>Here it is on Github</a>
+    </li>
+    {{/each}}
   </ul>
 </div>
