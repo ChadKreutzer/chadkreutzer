@@ -1,16 +1,30 @@
-<form action='/' id='contact_me' name='contact_me' method='post' novalidate='novalidate'>
+<div id="error-list">
+  {{#if errors}}
+    <ul>
+      {{#each errors}}
+      <li>
+        {{msg}}:
+        <p>{{value}}</p>
+      </li>
+      {{/each}}
+    </ul>
+    <p>Please try again</p>
+  {{/if}}
+</div>
+
+<form action='/' id='contact_me' name='contact_me' method='post'>
 
   <label for='name'>Name</label>
-  <input type="text" name='name' id='name' placeholder='NAME'>
+  <input type="text" name='name' id='name' placeholder='NAME' required>
 
   <label for='mail'>Email</label>
-  <input type="email" name='mail' id='mail' placeholder='EMAIL'>
+  <input type="email" name='email' id='email' placeholder='EMAIL' required>
 
   <label for='subject'>Subject</label>
-  <input type="text" name='subject' id='subject' placeholder='SUBJECT'>
+  <input type="text" name='subject' id='subject' placeholder='SUBJECT' required>
 
   <label for='body'>Message</label>
-  <textarea placeholder='MESSAGE' name="body" id="body" rows="10"></textarea>
+  <textarea placeholder='MESSAGE' name="body" id="body" rows="10" required></textarea>
 
   <input id="submit" type="submit">
 </form>
