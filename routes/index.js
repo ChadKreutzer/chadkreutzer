@@ -13,13 +13,18 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', function(req, res, next) {
-    req.checkBody('name', 'Invalid name').isAlpha();
+    req.checkBody('name', 'Name Required').notEmpty();
     req.sanitizeBody('name').escape();
+    req.sanitizeBody('name').trim();
+    
+    req.checkBody('email', 'Must be valid Email Address').isEmail();
+    req.sanitizeBody('email').normalizeEmail();
 
-    var errors = req.getValidationResult();
+    var errors = req.validationErrors();
     
     if (errors) {
-        res.render('partials/contact_form', { title: 'Invalid Fields', errors });
+        console.log(errors);
+        res.render('partials/contact', { title: 'Invalid Fields', errors });
     }
     else {
         emailService.send(
