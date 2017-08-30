@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
-const projects = require('../public/javascripts/projects');
-const header = require('../public/javascripts/header');
+const projects = require('../lib/projects');
+const header = require('../lib/header');
 
 const links = header('/../');
 

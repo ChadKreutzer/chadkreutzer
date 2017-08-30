@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var expressValidator = require('express-validator');
 var sassMiddleware = require('node-sass-middleware');
 var hbs = require('hbs');
-var markdown = require('./public/javascripts/helpers');
+var md = require('./lib/markdown');
 
 var index = require('./routes/index');
 var projects = require('./routes/projects');
@@ -18,7 +18,7 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
-hbs.registerHelper('md', markdown({
+hbs.registerHelper('md', md({
     path: '/public/markdown',
     ext: '.md'
   }));

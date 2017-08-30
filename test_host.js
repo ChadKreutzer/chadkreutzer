@@ -1,0 +1,1 @@
+module.exports = `${process.env.IP || 'http://localhost'}:${process.env.PORT || '3000'}`;

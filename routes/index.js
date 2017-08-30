@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const header = require('../public/javascripts/header');
-const projects = require('../public/javascripts/projects');
+const header = require('../lib/header');
+const projects = require('../lib/projects');
 const credentials = require('../credentials');
-const emailService = require('../public/javascripts/email')(credentials);
+const validate = require('../lib/validate');
+const emailService = require('../lib/email')(credentials);
 /* name, email, subj, body */
 const links = header();
 
@@ -13,20 +14,14 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', function(req, res, next) {
-    req.checkBody('name', 'Name Required').notEmpty();
-    req.sanitizeBody('name').escape();
-    req.sanitizeBody('name').trim();
     
-    req.checkBody('email', 'Must be valid Email Address').isEmail();
-    req.sanitizeBody('email').normalizeEmail();
-
-    var errors = req.validationErrors();
+    let errors = validate(req);
     
     if (errors) {
-        console.log(errors);
-        res.render('partials/contact', { title: 'Invalid Fields', errors });
+        res.render('partials/contact_form', { title: 'Invalid Fields', errors });
     }
     else {
+        console.log(req.body);
         emailService.send(
             req.body.name,
             req.body.email,
