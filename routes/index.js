@@ -15,13 +15,14 @@ router.get('/', function(req, res, next) {
 
 router.post('/', function(req, res, next) {
     
+    console.log(req.body);
+
     let errors = validate(req);
-    
+
     if (errors) {
         res.render('partials/contact_form', { title: 'Invalid Fields', errors });
     }
     else {
-        console.log(req.body);
         emailService.send(
             req.body.name,
             req.body.email,

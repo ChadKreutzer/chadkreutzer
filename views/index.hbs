@@ -4,9 +4,9 @@
   </h1>
 </div>
 <div id="home-body">
-  <a href="#about">About</a>
-  <a href="#portfolio">Portfolio</a>
-  <a href="#contact">Contact</a>
+  <button href="#about">About</button>
+  <button href="#portfolio">Portfolio</button>
+  <button href="#contact">Contact</button>
 </div>
 <div id="about">
   <h2>My Story So Far</h2>
@@ -19,28 +19,13 @@
   <h2>Things I Have Made</h2>
 </div>
 <div id="portfolio-body">
-  <h3>All of them made by hand with pride</h3>
-  <ul>
-    {{#each projects}}
-    <li>
-      <h4>{{title}}</h4>
-      <a href={{link}}><img src="images/{{link}}.jpg" alt="{{title}}"></a>
-      <br>
-      {{#each tools}}
-        <button>{{this}}</button>
-      {{/each}}
-      <p>{{description}}</p>
-      <a href={{github}}>Here it is on Github</a>
-    </li>
-    {{/each}}
-  </ul>
+  {{> projects}}
 </div>
 <div id="contact">
   <h2>Ways to Reach Me</h2>
 </div>
 <div id="contact-body">
     {{> social_buttons}}
-    <h3>Contact Me:</h3>
     {{> contact_form}}
 </div>
 <div id="goodbye"></div>
