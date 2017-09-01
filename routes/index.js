@@ -6,6 +6,7 @@ const header = require('../lib/header');
 const projects = require('../lib/projects');
 const credentials = require('../credentials');
 const emailService = require('../lib/email')(credentials);
+const validate = require('../public/javascripts/validation-error.js');
 
 const links = header();
 
@@ -49,7 +50,7 @@ router.post('/', [
     catch (err) {
         const errors = err.mapped();
         /* TODO: make a better error response method */
-        res.render('partials/contact_form', { title: 'Invalid Fields', errors });
+        validate(errors);
     }
 });
 
