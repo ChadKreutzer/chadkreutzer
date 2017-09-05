@@ -49,8 +49,7 @@ router.post('/', [
     }
     catch (err) {
         const errors = err.mapped();
-        /* TODO: make a better error response method */
-        validate(errors);
+        res.io.emit("socketToMe", errors);
     }
 });
 

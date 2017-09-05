@@ -1,4 +1,5 @@
 <h3>Contact Me:</h3>
+<div id="errors"></div>
 <form action='/' id='contact_me' name='contact_me' method='post'>
 
   <label for='name'>Name</label>
@@ -15,5 +16,12 @@
 
   <input id="submit" type="submit">
 </form>
-
-<script src="../../public/javascripts/validation-error.js"></script>
+<script src="socket.io/socket.io.js"></script>
+<script>
+  var socket = io();
+  var errors = document.getElementById('errors');
+  socket.on('socketToMe', function (data) {
+    console.log(data);
+  });
+</script>
+{{!-- <script src="javascripts/validation-error.js"></script> --}}

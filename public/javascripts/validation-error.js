@@ -1,3 +1,3 @@
-module.exports = function (err) {
-    document.getElementById("name").classList.add("test");
-}
+// socket.on('socketToMe', function(data){
+//     console.log(data);
+// });

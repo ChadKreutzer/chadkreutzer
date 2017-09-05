@@ -13,10 +13,17 @@ var index = require('./routes/index');
 var projects = require('./routes/projects');
 
 var app = express();
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+
+app.use(function(req, res, next){
+  res.io = io;
+  next();
+});
 
 hbs.registerHelper('md', md({
   path: '/public/markdown',
@@ -64,4 +71,4 @@ app.use(function (err, req, res, next) {
   res.render('error');
 });
 
-module.exports = app;
+module.exports = {app: app, server: server};
