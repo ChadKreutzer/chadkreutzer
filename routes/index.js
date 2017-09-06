@@ -38,12 +38,12 @@ router.post('/', [
         req.sanitizeBody('body').trim();
 
         const message = matchedData(req);
-        // emailService.send(
-        //     message.name,
-        //     message.email,
-        //     message.subject,
-        //     message.body
-        // );
+        emailService.send(
+            message.name,
+            message.email,
+            message.subject,
+            message.body
+        );
         res.redirect('/');
     }
     catch (err) {
