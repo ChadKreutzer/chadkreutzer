@@ -12,8 +12,7 @@
   <h2>My Story So Far</h2>
 </div>
 <div id="about-body">
-  <img id="pup-and-me" src="/images/eli_and_me.jpg" alt="My dog and me laying in the grass">
-  {{md 'about_me'}}
+  <img id="pup-and-me" src="/images/eli_and_me.jpg" alt="My dog and me laying in the grass"> {{md 'about_me'}}
 </div>
 <div id="portfolio">
   <h2>Things I Have Made</h2>
@@ -25,7 +24,12 @@
   <h2>Ways to Reach Me</h2>
 </div>
 <div id="contact-body">
-    {{> social_buttons}}
-    {{> contact_form}}
+  {{> social_buttons}} {{> contact_form}}
 </div>
 <div id="goodbye"></div>
+
+{{#if anchor}}
+<script>
+  window.onload = window.location.hash = '#{{anchor}}';
+</script>
+{{/if}}

@@ -6,7 +6,6 @@ const header = require('../lib/header');
 const projects = require('../lib/projects');
 const credentials = require('../credentials');
 const emailService = require('../lib/email')(credentials);
-const validate = require('../public/javascripts/validation-error.js');
 
 const links = header();
 
@@ -39,18 +38,25 @@ router.post('/', [
         req.sanitizeBody('body').trim();
 
         const message = matchedData(req);
-        emailService.send(
-            message.name,
-            message.email,
-            message.subject,
-            message.body
-        );
+        // emailService.send(
+        //     message.name,
+        //     message.email,
+        //     message.subject,
+        //     message.body
+        // );
         res.redirect('/');
     }
     catch (err) {
         const errors = err.mapped();
-        /* TODO: make a better error response method */
-        validate(errors);
+        const values = req.body;
+        res.render('index', {
+            title: 'Chad Kreutzer',
+            anchor: 'contact',
+            links,
+            projects,
+            errors,
+            values
+        });
     }
 });
 
