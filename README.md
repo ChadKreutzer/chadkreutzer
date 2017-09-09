@@ -17,7 +17,11 @@ The current site is built using Sinatra
 
 ## Current TODO
 
-
 * flash notification on successful contact
 * reCaptcha on contact form
+* responsive drop down menu
 * style site
+* redo logo
+* move projects to database
+* publish to azure or aws
+* implement new blog
