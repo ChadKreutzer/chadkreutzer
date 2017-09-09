@@ -14,3 +14,10 @@ The current site is built using Sinatra
 
 * Find node replacement for Jekyll for the blog
 * ~~Host static projects locally~~ **DONE**
+
+## Current TODO
+
+
+* flash notification on successful contact
+* reCaptcha on contact form
+* style site
