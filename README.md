@@ -18,6 +18,7 @@ The current site is built using Sinatra
 ## Current TODO
 
 * flash notification on successful contact
+    * mostly done. working on fade out if not clicked
 * reCaptcha on contact form
 * responsive drop down menu
 * style site

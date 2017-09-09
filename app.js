@@ -3,12 +3,13 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
+var sessions = require("express-session");
 var bodyParser = require('body-parser');
 var expressValidator = require('express-validator');
 var sassMiddleware = require('node-sass-middleware');
 var hbs = require('hbs');
 var md = require('./lib/markdown');
-
+const credentials = require('./credentials');
 var index = require('./routes/index');
 var projects = require('./routes/projects');
 
@@ -34,7 +35,12 @@ app.use(bodyParser.urlencoded({
   extended: false
 }));
 app.use(expressValidator());
-app.use(cookieParser());
+app.use(cookieParser(credentials.cookieSecret));
+app.use(sessions({
+  resave: false,
+  saveUninitialized: false,
+  secret: credentials.cookieSecret
+}));
 app.use(sassMiddleware({
   src: path.join(__dirname, 'public'),
   dest: path.join(__dirname, 'public'),
@@ -42,6 +48,11 @@ app.use(sassMiddleware({
   sourceMap: true
 }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(function(req, res, next) {
+  res.locals.flash = req.session.flash;
+  delete req.session.flash;
+  next();
+});
 
 app.use('/', index);
 app.use('/projects', projects);

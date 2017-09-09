@@ -11,7 +11,11 @@ const links = header();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('index', { title: 'Chad Kreutzer', links, projects });
+    res.render('index', {
+        title: 'Chad Kreutzer',
+        links,
+        projects
+    });
 });
 
 /* POST email */
@@ -38,13 +42,24 @@ router.post('/', [
         req.sanitizeBody('body').trim();
 
         const message = matchedData(req);
-        emailService.send(
-            message.name,
-            message.email,
-            message.subject,
-            message.body
-        );
-        res.redirect('/');
+        // emailService.send(
+        //     message.name,
+        //     message.email,
+        //     message.subject,
+        //     message.body
+        // );
+        
+        req.session.flash = {
+            type: 'thanks',
+            intro: 'Message Sent',
+            message: `Thank you for sending me a message, ${message.name}`
+        };
+        res.render('index', {
+            title: 'Chad Kreutzer',
+            anchor: 'contact',
+            links,
+            projects
+        });
     }
     catch (err) {
         const errors = err.mapped();
