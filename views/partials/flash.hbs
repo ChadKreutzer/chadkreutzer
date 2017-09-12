@@ -8,17 +8,15 @@
     <script>
         const closeButton = document.getElementById('close');
         const flashMsg = document.getElementsByClassName('flash')[0];
-        closeButton.addEventListener('click', function() {
-            
-            function removeFlash () {
-                flashMsg.setAttribute('style', 'display:none');
-            }
+        let timeoutID;        
+        
+        const hideMsg = () => {
+            const removeMsg = () => flashMsg.setAttribute('style', 'display:none');
             
             flashMsg.classList.add('hidden');
-            const timeoutID = setTimeout(removeFlash, 2000);
-            clearTimeout(timeoutID);
-            
-            
-        });
+            timeoutID = setTimeout(removeMsg, 2000);
+        }
+        timeoutID = setTimeout(hideMsg, 5000);
+        closeButton.addEventListener('click', hideMsg);
     </script>
 {{/if}}

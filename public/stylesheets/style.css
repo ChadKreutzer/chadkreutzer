@@ -448,7 +448,7 @@ iframe {
   height: 50vh; }
 
 .flash {
-  transition: opacity 10s; }
+  transition: opacity 2s; }
 
 .hidden {
   opacity: 0; }
