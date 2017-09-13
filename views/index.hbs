@@ -4,27 +4,36 @@
   </h1>
 </div>
 <div id="home-body">
-  <button href="#about">About</button>
-  <button href="#portfolio">Portfolio</button>
-  <button href="#contact">Contact</button>
+  <a href="#about"><i class="fa fa-user-o fa-4x"></i></a>
+  <a href="#portfolio"><i class="fa fa-code fa-4x"></i></a>
+  <a href="#contact"><i class="fa fa-envelope-open-o fa-4x"></i></a>
 </div>
 <div id="about">
+  <i class="fa fa-user-o fa-4x"></i>
   <h2>My Story So Far</h2>
 </div>
 <div id="about-body">
-  <img id="pup-and-me" src="/images/eli_and_me.jpg" alt="My dog and me laying in the grass"> {{md 'about_me'}}
+  <img id="pup-and-me" src="/images/eli_and_me.jpg" alt="My dog and me laying in the grass">
+  {{md 'about_me'}}
 </div>
 <div id="portfolio">
+  <i class="fa fa-code fa-4x"></i>
   <h2>Things I Have Made</h2>
 </div>
 <div id="portfolio-body">
   {{> projects}}
 </div>
 <div id="contact">
+  <i class="fa fa-envelope-open-o fa-4x"></i>
   <h2>Ways to Reach Me</h2>
 </div>
 <div id="contact-body">
-  {{> social_buttons}} {{> contact_form}}
+  <div id="social">
+  <a href="https://www.linkedin.com/in/chad-kreutzer-888a9b29"><i class="fa fa-linkedin-square fa-4x"></i></a>
+  <a href="https://github.com/ChadKreutzer"><i class="fa fa-github fa-4x"></i></a>
+  <a href="https://twitter.com/kanthalion"><i class="fa fa-twitter fa-4x"></i></a>
+  </div>
+  {{> contact_form}}
 </div>
 <div id="goodbye"></div>
 

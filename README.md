@@ -17,12 +17,11 @@ The current site is built using Sinatra
 
 ## Current TODO
 
-* ~~flash notification on successful contact~~
-    * ~~mostly done. working on fade out if not clicked~~ **DONE**
-* reCaptcha on contact form
+* ~~flash notification on successful contact~~ **DONE**
 * responsive drop down menu
 * style site
 * redo logo
 * move projects to database
 * publish to azure or aws
+* reCaptcha on contact form
 * implement new blog

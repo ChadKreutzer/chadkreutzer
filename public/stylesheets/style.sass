@@ -6,9 +6,9 @@
   background-position: center
   background-attachment: fixed
   height: 50vh
-  // display: flex
-  // justify-content: center
-  // align-items: center
+  display: flex
+  justify-content: center
+  align-items: center
 
 ul,
 li
@@ -25,6 +25,14 @@ header
   // display: flex
   // justify-content: flex-end
   // align-items: center
+  
+nav
+  // display: flex
+  // justify-content: flex-end
+  // align-items: center
+  display: grid
+  grid-template-columns: 12fr repeat(4, 1fr)
+  align-items: center
 
 #home
   background-image: url('/images/me_at_table_mountain.jpg')
@@ -33,6 +41,9 @@ header
 
 #home-body
   height: 25vh
+  display: flex
+  justify-content: space-evenly
+  align-items: center
 
 #about
   background-image: url('/images/yellow_grate.jpg')
@@ -54,6 +65,17 @@ iframe
 #contact
   background-image: url('/images/union_station.jpg')
   +full-background
+  
+// #contact-body
+//   display: flex
+//   flex-direction: column
+//   justify-content: space-evenly
+//   align-items: center
+
+#social
+  display: flex
+  justify-content: space-evenly
+  align-items: center
   
 .flash
   transition: opacity 2s
