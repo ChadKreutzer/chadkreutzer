@@ -391,7 +391,9 @@ template {
 
 ul,
 li {
-  list-style-type: none; }
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
 
 a {
   text-decoration: none; }
@@ -404,7 +406,7 @@ header {
 
 nav {
   display: grid;
-  grid-template-columns: 12fr repeat(4, 1fr);
+  grid-template-columns: 8fr repeat(4, 1fr);
   align-items: center; }
 
 #home {
@@ -436,8 +438,15 @@ nav {
   justify-content: center;
   align-items: center; }
 
+#about-body {
+  display: grid;
+  align-items: center;
+  justify-items: center; }
+
 #pup-and-me {
-  float: right; }
+  margin: 5px;
+  max-width: 100%;
+  max-height: auto; }
 
 #portfolio {
   background-image: url("/images/mecha_needle.jpg");
@@ -448,8 +457,20 @@ nav {
   height: 50vh;
   display: flex;
   justify-content: center;
+  align-items: center; }
+
+#projects {
+  display: flex;
+  flex-flow: row wrap;
   align-items: center;
-  clear: right; }
+  justify-content: space-around;
+  margin-bottom: 50px; }
+  #projects .project {
+    width: 240px;
+    height: 500px;
+    margin: 10px 5px 100px 5px; }
+    #projects .project a img {
+      max-width: 100%; }
 
 iframe {
   width: 100%;

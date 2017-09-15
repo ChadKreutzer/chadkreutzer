@@ -13,6 +13,8 @@
 ul,
 li
   list-style-type: none
+  padding: 0
+  margin: 0
 
 a
   text-decoration: none
@@ -22,16 +24,10 @@ header
   top: 0
   width: 100%
   background-color: rgba(255, 255, 255, .75)
-  // display: flex
-  // justify-content: flex-end
-  // align-items: center
   
 nav
-  // display: flex
-  // justify-content: flex-end
-  // align-items: center
   display: grid
-  grid-template-columns: 12fr repeat(4, 1fr)
+  grid-template-columns: 8fr repeat(4, 1fr)
   align-items: center
 
 #home
@@ -49,13 +45,34 @@ nav
   background-image: url('/images/yellow_grate.jpg')
   +full-background
 
+#about-body
+  display: grid
+  align-items: center
+  justify-items: center
+
+#me
+
 #pup-and-me
-  float: right
+  margin: 5px
+  max-width: 100%
+  max-height: auto
 
 #portfolio
   background-image: url('/images/mecha_needle.jpg')
   +full-background
-  clear: right
+
+#projects
+  display: flex
+  flex-flow: row wrap
+  align-items: center
+  justify-content: space-around
+  margin-bottom: 50px
+  .project
+    width: 240px
+    height: 500px
+    margin: 10px 5px 100px 5px
+    a img
+      max-width: 100%
 
 iframe
   width: 100%
@@ -65,12 +82,6 @@ iframe
 #contact
   background-image: url('/images/union_station.jpg')
   +full-background
-  
-// #contact-body
-//   display: flex
-//   flex-direction: column
-//   justify-content: space-evenly
-//   align-items: center
 
 #social
   display: flex
