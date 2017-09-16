@@ -1,4 +1,5 @@
 @import normalize
+@import url('https://fonts.googleapis.com/css?family=Oswald')
 
 =full-background 
   background-size: cover
@@ -19,16 +20,39 @@ li
 a
   text-decoration: none
 
+body
+  font-family: 'Ariel', sans-serif
+
+nav, h3, label
+  font-family: 'Oswald', sans-serif
+
 header
   position: fixed
   top: 0
   width: 100%
+  background-color: rgb(255, 255, 255)
+  nav
+    display: flex
+    justify-content: flex-end
+    @media only screen and (max-width : 480px)
+      justify-content: space-evenly
+    a
+      margin: 0 5px 0 5px
+    
+.section-title, h1
   background-color: rgba(255, 255, 255, .75)
+  padding: 10px
   
-nav
-  display: grid
-  grid-template-columns: 8fr repeat(4, 1fr)
+.section-title, h1, img, input, textarea
+  border-radius: 5px
+  
+.section-title
+  display: flex
+  justify-content: center
   align-items: center
+  font-size: 1.5em
+  i
+    margin-right: 5px
 
 #home
   background-image: url('/images/me_at_table_mountain.jpg')
@@ -40,22 +64,27 @@ nav
   display: flex
   justify-content: space-evenly
   align-items: center
-
+  
 #about
   background-image: url('/images/yellow_grate.jpg')
   +full-background
 
 #about-body
-  display: grid
+  display: flex
+  flex-direction: column
+  @media only screen and (min-width : 850px)
+    flex-direction: row
   align-items: center
-  justify-items: center
-
-#me
-
-#pup-and-me
-  margin: 5px
-  max-width: 100%
-  max-height: auto
+  justify-content: center
+  #about-text
+    @media only screen and (min-width : 850px)
+      align-self: flex-start
+      margin-left: 5px
+    max-width: 600px
+  #pup-and-me
+    margin: 5px
+    max-width: 100%
+    max-height: auto
 
 #portfolio
   background-image: url('/images/mecha_needle.jpg')
@@ -83,14 +112,43 @@ iframe
   background-image: url('/images/union_station.jpg')
   +full-background
 
-#social
-  display: flex
-  justify-content: space-evenly
-  align-items: center
-  
-.flash
-  transition: opacity 2s
-
+#contact-body
+  display: grid
+  grid-template-columns: repeat(7, 1fr)
+  grid-template-rows: repeat(4, 1fr)
+  #social
+    grid-column: 1/8
+    grid-row: 1
+    display: flex
+    justify-content: space-evenly
+    align-items: center
+  form
+    grid-column: 2/7
+    @media only screen and (max-width : 320px)
+      grid-column: 1/8
+    grid-row: 2/5
+    display: flex
+    flex-direction: column
+    #submit
+      align-self: flex-end
+      margin-top: 10px
+  .flash
+    transition: opacity 2s
+    background-color: rgba(144, 238, 144, 0.75)
+    border: 1px solid rgb(92, 152, 92)
+    border-radius: 5px
+    transform: scale(0.95)
+    grid-column: 2/7
+    grid-row: 3/4
+    z-index: 10
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    #close
+      align-self: flex-start
+      margin-left: 10px
+      
 .hidden
   opacity: 0
   
@@ -98,6 +156,3 @@ iframe
   background-image: url('/images/me_at_table_mountain.jpg')
   +full-background
   height: 100vh
-
-.test
-  background-color: red

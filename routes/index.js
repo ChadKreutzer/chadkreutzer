@@ -11,8 +11,14 @@ const links = header();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+    req.session.flash = {
+            type: 'thanks',
+            intro: 'Message Sent',
+            message: `Thank you for sending me a message. I'll get back to you as soon as I can.`
+        };
     res.render('index', {
         title: 'Chad Kreutzer',
+        anchor: 'home',
         links,
         projects
     });
@@ -52,7 +58,7 @@ router.post('/', [
         req.session.flash = {
             type: 'thanks',
             intro: 'Message Sent',
-            message: `Thank you for sending me a message, ${message.name}`
+            message: `Thank you for sending me a message, I'll get back to you as soon as I can`
         };
         res.render('index', {
             title: 'Chad Kreutzer',

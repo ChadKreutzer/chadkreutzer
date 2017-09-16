@@ -4,21 +4,36 @@
   </h1>
 </div>
 <div id="home-body">
-  <a href="#about"><i class="fa fa-user-o fa-4x"></i></a>
-  <a href="#portfolio"><i class="fa fa-code fa-4x"></i></a>
-  <a href="#contact"><i class="fa fa-envelope-open-o fa-4x"></i></a>
+  <a class="fa-stack fa-3x" href="#about">
+    <i class="fa fa-circle fa-stack-2x"></i>
+    <i class="fa fa-user-o fa-stack-1x fa-inverse"></i>
+  </a>
+  <a class="fa-stack fa-3x" href="#portfolio">
+    <i class="fa fa-circle fa-stack-2x"></i>
+    <i class="fa fa-code fa-stack-1x fa-inverse"></i>
+  </a>
+  <a class="fa-stack fa-3x" href="#contact">
+    <i class="fa fa-circle fa-stack-2x"></i>
+    <i class="fa fa-envelope-open-o fa-stack-1x fa-inverse"></i>
+  </a>
 </div>
 <div id="about">
-  <i class="fa fa-user-o fa-4x"></i>
-  <h2>My Story So Far</h2>
+  <div class="section-title">
+    <i class="fa fa-user-o fa-4x"></i>
+    <h2>My Story So Far</h2>
+  </div>
 </div>
 <div id="about-body">
-  {{md 'about_me'}}
+  <div id="about-text">
+    {{md 'about_me'}}
+  </div>
   <img id="pup-and-me" src="/images/eli_and_me.jpg" alt="My dog and me laying in the grass">
 </div>
 <div id="portfolio">
-  <i class="fa fa-code fa-4x"></i>
-  <h2>Things I Have Made</h2>
+  <div class="section-title">
+    <i class="fa fa-code fa-4x"></i>
+    <h2>Things I Have Made</h2>
+  </div>
 </div>
 <div id="portfolio-body">
   <ul id="projects">
@@ -26,8 +41,10 @@
   </ul>
 </div>
 <div id="contact">
-  <i class="fa fa-envelope-open-o fa-4x"></i>
-  <h2>Ways to Reach Me</h2>
+  <div class="section-title">
+    <i class="fa fa-envelope-open-o fa-4x"></i>
+    <h2>Ways to Reach Me</h2>
+  </div>
 </div>
 <div id="contact-body">
   <div id="social">

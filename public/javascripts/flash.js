@@ -7,6 +7,7 @@ const hideMsg = () => {
     
     flashMsg.classList.add('hidden');
     timeoutID = setTimeout(removeMsg, 2000);
-}
-timeoutID = setTimeout(hideMsg, 5000);
+};
+
+timeoutID = setTimeout(hideMsg, 15000);
 closeButton.addEventListener('click', hideMsg);

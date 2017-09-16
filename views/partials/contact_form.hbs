@@ -2,19 +2,19 @@
 <form action='/' id='contact_me' name='contact_me' method='post'>
 
   <label for='name'>Name</label>
-  <input type="text" name='name' id='name' placeholder='NAME' value="{{values.name}}" required>
+  <input type="text" name='name' id='name' placeholder='Bob Smith' value="{{values.name}}" required>
   <div class='msg'>{{errors.name.msg}}</div>
 
   <label for='email'>Email</label>
-  <input type="email" name='email' id='email' placeholder='EMAIL' value="{{values.email}}" required>
+  <input type="email" name='email' id='email' placeholder='bob@example.com' value="{{values.email}}" required>
   <div class='msg'>{{errors.email.msg}}</div>
 
   <label for='subject'>Subject</label>
-  <input type="text" name='subject' id='subject' placeholder='SUBJECT' value="{{values.subject}}" required>
+  <input type="text" name='subject' id='subject' placeholder="I'm Messaging You About Stuff" value="{{values.subject}}" required>
   <div class='msg'>{{errors.subject.msg}}</div>
 
   <label for='body'>Message</label>
-  <textarea placeholder='MESSAGE' name="body" id="body" rows="10" required>{{values.body}}</textarea>
+  <textarea placeholder="This is the stuff about which I'm messaging you." name="body" id="body" rows="10" required>{{values.body}}</textarea>
   <div class='msg'>{{errors.body.msg}}</div>
 
   <input id="submit" type="submit">

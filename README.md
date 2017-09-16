@@ -18,7 +18,8 @@ The current site is built using Sinatra
 ## Current TODO
 
 * ~~flash notification on successful contact~~ **DONE**
-* responsive drop down menu
+* ~~responsive drop down menu~~ **Decided not to do**
+* Vanilla/CSS smooth scrolling
 * style site
 * redo logo
 * move projects to database
