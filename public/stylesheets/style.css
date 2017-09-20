@@ -541,6 +541,8 @@ iframe {
     @media only screen and (max-width: 320px) {
       #contact-body form {
         grid-column: 1/8; } }
+    #contact-body form label {
+      margin-bottom: 3px; }
     #contact-body form .msg {
       background-color: rgba(238, 144, 144, 0.75);
       border: 1px solid #985c5c;
