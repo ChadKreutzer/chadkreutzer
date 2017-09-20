@@ -19,7 +19,7 @@ The current site is built using Sinatra
 
 * ~~flash notification on successful contact~~ **DONE**
 * ~~responsive drop down menu~~ **Decided not to do**
-* Vanilla/CSS smooth scrolling
+* ~~Vanilla/CSS smooth scrolling~~ **DONE**
 * style site
 * redo logo
 * move projects to database

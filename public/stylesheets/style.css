@@ -391,7 +391,8 @@ template {
   display: none; }
 
 body {
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  background-color: rgba(169, 227, 231, 0.75); }
 
 ul,
 li {
@@ -417,7 +418,7 @@ h1 {
   h1 small {
     font-size: .33em; }
 
-nav, h3, label {
+nav, h3, label, #submit {
   font-family: 'Oswald', sans-serif; }
 
 header {
@@ -427,12 +428,18 @@ header {
   background-color: white; }
   header nav {
     display: flex;
-    justify-content: flex-end; }
+    justify-content: flex-end;
+    padding-right: 10px; }
     @media only screen and (max-width: 480px) {
       header nav {
-        justify-content: space-evenly; } }
+        justify-content: space-evenly;
+        padding-right: 0px; } }
     header nav a {
-      margin: 0 5px 0 5px; }
+      margin: 0 7px 0 7px; }
+      header nav a:hover {
+        transform: scale(1.33); }
+    header nav .active {
+      background-color: grey; }
 
 .section-title, h1 {
   background-color: rgba(255, 255, 255, 0.75);
@@ -482,7 +489,8 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  margin: 10px 0 50px 0; }
   @media only screen and (min-width: 850px) {
     #about-body {
       flex-direction: row; } }
@@ -491,9 +499,9 @@ header {
     @media only screen and (min-width: 850px) {
       #about-body #about-text {
         align-self: flex-start;
-        margin-left: 5px; } }
+        margin: 5px; } }
   #about-body #pup-and-me {
-    margin: 5px;
+    margin: 5px 5px 5px 5px;
     max-width: 100%;
     max-height: auto; }
 
@@ -535,7 +543,8 @@ iframe {
   height: 50vh;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  height: 39vh; }
 
 #contact-body {
   display: grid;
@@ -567,7 +576,10 @@ iframe {
       transform: scale(0.95); }
     #contact-body form #submit {
       align-self: flex-end;
-      margin-top: 10px; }
+      margin-top: 10px;
+      font-size: 1.5em; }
+      #contact-body form #submit:hover {
+        transform: scale(1.25); }
   #contact-body .flash {
     transition: opacity 2s;
     background-color: rgba(144, 238, 144, 0.75);

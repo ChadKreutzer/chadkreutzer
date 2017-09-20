@@ -13,6 +13,7 @@
 
 body
   scroll-behavior: smooth
+  background-color: rgba(169, 227, 231, .75)
 
 ul,
 li
@@ -36,7 +37,7 @@ h1
   small
     font-size: .33em
 
-nav, h3, label
+nav, h3, label, #submit
   font-family: 'Oswald', sans-serif
 
 header
@@ -47,10 +48,16 @@ header
   nav
     display: flex
     justify-content: flex-end
+    padding-right: 10px
     @media only screen and (max-width : 480px)
       justify-content: space-evenly
+      padding-right: 0px
     a
-      margin: 0 5px 0 5px
+      margin: 0 7px 0 7px
+      &:hover
+        transform: scale(1.33)
+    .active
+      background-color: grey
 
     
 .section-title, h1
@@ -90,13 +97,14 @@ header
     flex-direction: row
   align-items: center
   justify-content: center
+  margin: 10px 0 50px 0
   #about-text
     @media only screen and (min-width : 850px)
       align-self: flex-start
-      margin-left: 5px
+      margin: 5px
     max-width: 600px
   #pup-and-me
-    margin: 5px
+    margin: 5px 5px 5px 5px
     max-width: 100%
     max-height: auto
 
@@ -125,6 +133,7 @@ iframe
 #contact
   background-image: url('/images/union_station.jpg')
   +full-background
+  height: 39vh
 
 #contact-body
   display: grid
@@ -156,6 +165,9 @@ iframe
     #submit
       align-self: flex-end
       margin-top: 10px
+      font-size: 1.5em
+      &:hover
+        transform: scale(1.25)
   .flash
     transition: opacity 2s
     background-color: rgba(144, 238, 144, 0.75)
