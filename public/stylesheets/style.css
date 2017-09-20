@@ -6,7 +6,7 @@
  * 2. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
-@import url("https://fonts.googleapis.com/css?family=Oswald");
+@import url("https://fonts.googleapis.com/css?family=Alegreya|Oswald");
 html {
   line-height: 1.15;
   /* 1 */
@@ -399,8 +399,20 @@ li {
 a {
   text-decoration: none; }
 
-body {
+body, h1 small {
   font-family: 'Ariel', sans-serif; }
+
+h1 {
+  font-size: 3.5em;
+  font-family: 'Alegreya', serif; }
+  @media only screen and (max-width: 360px) {
+    h1 {
+      font-size: 3.3em; } }
+  @media only screen and (min-width: 768px) {
+    h1 {
+      font-size: 5em; } }
+  h1 small {
+    font-size: .33em; }
 
 nav, h3, label {
   font-family: 'Oswald', sans-serif; }
