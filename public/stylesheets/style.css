@@ -390,6 +390,9 @@ template {
 [hidden] {
   display: none; }
 
+body {
+  scroll-behavior: smooth; }
+
 ul,
 li {
   list-style-type: none;
