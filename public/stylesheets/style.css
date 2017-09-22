@@ -391,7 +391,6 @@ template {
   display: none; }
 
 body {
-  scroll-behavior: smooth;
   background-color: rgba(169, 227, 231, 0.75); }
 
 ul,
