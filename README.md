@@ -21,8 +21,14 @@ The current site is built using Sinatra
 * ~~responsive drop down menu~~ **Decided not to do**
 * ~~Vanilla/CSS smooth scrolling~~ **DONE**
 * style site
+    * Make menu highlight change as that section is on screen
+    * make big links rotate on hover
+        * make them a bit more clear (labels?)
+    * add coloring to social links
+* Re-write about me
+* Add resume
 * redo logo
-* move projects to database
+* move projects to database (maybe?)
 * publish to azure or aws
 * reCaptcha on contact form
 * implement new blog
