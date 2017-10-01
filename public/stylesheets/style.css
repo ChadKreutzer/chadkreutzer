@@ -443,7 +443,7 @@ header {
     header nav a {
       margin: 0 7px 0 7px; }
     header nav .active {
-      background-color: grey; }
+      background-color: rgba(97, 125, 131, 0.55); }
 
 .section-title, h1 {
   background-color: rgba(255, 255, 255, 0.75);
@@ -560,6 +560,8 @@ iframe {
     display: flex;
     justify-content: space-evenly;
     align-items: center; }
+    #contact-body #social a {
+      color: #617d83; }
     #contact-body #social #li:hover {
       color: #4875B4; }
     #contact-body #social #gh:hover {
