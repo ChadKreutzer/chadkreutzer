@@ -560,6 +560,12 @@ iframe {
     display: flex;
     justify-content: space-evenly;
     align-items: center; }
+    #contact-body #social #li:hover {
+      color: #4875B4; }
+    #contact-body #social #gh:hover {
+      color: #6E5494; }
+    #contact-body #social #tw:hover {
+      color: #33CCFF; }
   #contact-body form {
     grid-column: 2/7;
     grid-row: 2/5;
