@@ -15,7 +15,11 @@ function debounce(func, wait = 20, immediate = true) {
 }
 
 const sections = document.querySelectorAll(".section");
-
+/*
+ * https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollTop
+ * https://stackoverflow.com/questions/19618545/body-scrolltop-vs-documentelement-scrolltop-vs-window-pagyoffset-vs-window-scrol
+ * https://codepen.io/zchee/pen/ogzvZZ?editors=0010
+ */
 function checkSections(e) {
     sections.forEach(section => {
         const slideInAt = (window.scrollY + window.innerHeight) - section.offsetTop;
