@@ -18,8 +18,6 @@ const sections = document.querySelectorAll(".section");
 
 function checkSections(e) {
     sections.forEach(section => {
-        console.log(section);
-        console.log(`${section.offsetTop}: ${window.scrollY + window.innerHeight}`);
         const slideInAt = (window.scrollY + window.innerHeight) - section.offsetTop;
         const imageBottom = section.offsetTop + (section.offsetHeight - 1);
         const isAtSection = slideInAt > section.offsetTop;

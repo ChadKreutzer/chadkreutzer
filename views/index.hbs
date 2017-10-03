@@ -1,69 +1,61 @@
-<div class="section">
-  <div id="home">
-    <h1>Chad Kreutzer:<br>
-      <small>I like to make things</small>
-    </h1>
-  </div>
-  <div id="home-body">
-    <a class="fa-stack fa-3x" href="#about">
-    <i class="fa fa-circle fa-stack-2x"></i>
-    <i class="fa fa-user-o fa-stack-1x fa-inverse"></i>
-  </a>
-    <a class="fa-stack fa-3x" href="#portfolio">
-    <i class="fa fa-circle fa-stack-2x"></i>
-    <i class="fa fa-code fa-stack-1x fa-inverse"></i>
-  </a>
-    <a class="fa-stack fa-3x" href="#contact">
-    <i class="fa fa-circle fa-stack-2x"></i>
-    <i class="fa fa-envelope-open-o fa-stack-1x fa-inverse"></i>
-  </a>
-  </div>
+<div id="home" class="section">
+  <h1>Chad Kreutzer:<br>
+    <small>I like to make things</small>
+  </h1>
+</div>
+<div id="home-body">
+  <a class="fa-stack fa-3x" href="#about">
+  <i class="fa fa-circle fa-stack-2x"></i>
+  <i class="fa fa-user-o fa-stack-1x fa-inverse"></i>
+</a>
+  <a class="fa-stack fa-3x" href="#portfolio">
+  <i class="fa fa-circle fa-stack-2x"></i>
+  <i class="fa fa-code fa-stack-1x fa-inverse"></i>
+</a>
+  <a class="fa-stack fa-3x" href="#contact">
+  <i class="fa fa-circle fa-stack-2x"></i>
+  <i class="fa fa-envelope-open-o fa-stack-1x fa-inverse"></i>
+</a>
 </div>
 
-<div class="section">
-  <div id="about">
-    <div class="section-title">
-      <i class="fa fa-user-o fa-4x"></i>
-      <h2>My Story So Far</h2>
-    </div>
-  </div>
-  <div id="about-body">
-    <div id="about-text">
-      {{md 'about_me'}}
-    </div>
-    <img id="pup-and-me" src="/images/eli_and_me.jpg" alt="My dog and me laying in the grass">
+<div id="about" class="section">
+  <div class="section-title">
+    <i class="fa fa-user-o fa-4x"></i>
+    <h2>My Story So Far</h2>
   </div>
 </div>
-
-<div class="section">
-  <div id="portfolio">
-    <div class="section-title">
-      <i class="fa fa-code fa-4x"></i>
-      <h2>Things I Have Made</h2>
-    </div>
+<div id="about-body">
+  <div id="about-text">
+    {{md 'about_me'}}
   </div>
-  <div id="portfolio-body">
-    <ul id="projects">
-      {{> projects}}
-    </ul>
-  </div>
+  <img id="pup-and-me" src="/images/eli_and_me.jpg" alt="My dog and me laying in the grass">
 </div>
 
-<div class="section">
-  <div id="contact">
-    <div class="section-title">
-      <i class="fa fa-envelope-open-o fa-4x"></i>
-      <h2>Ways to Reach Me</h2>
-    </div>
+<div id="portfolio" classs="section">
+  <div class="section-title">
+    <i class="fa fa-code fa-4x"></i>
+    <h2>Things I Have Made</h2>
   </div>
-  <div id="contact-body">
-    <div id="social">
-      <a id="li" href="https://www.linkedin.com/in/chad-kreutzer-888a9b29"><i class="fa fa-linkedin-square fa-4x"></i></a>
-      <a id="gh" href="https://github.com/ChadKreutzer"><i class="fa fa-github fa-4x"></i></a>
-      <a id="tw" href="https://twitter.com/kanthalion"><i class="fa fa-twitter fa-4x"></i></a>
-    </div>
-    {{> contact_form}}
+</div>
+<div id="portfolio-body">
+  <ul id="projects">
+    {{> projects}}
+  </ul>
+</div>
+
+<div id="contact" class="section">
+  <div class="section-title">
+    <i class="fa fa-envelope-open-o fa-4x"></i>
+    <h2>Ways to Reach Me</h2>
   </div>
+</div>
+<div id="contact-body">
+  <div id="social">
+    <a id="li" href="https://www.linkedin.com/in/chad-kreutzer-888a9b29"><i class="fa fa-linkedin-square fa-4x"></i></a>
+    <a id="gh" href="https://github.com/ChadKreutzer"><i class="fa fa-github fa-4x"></i></a>
+    <a id="tw" href="https://twitter.com/kanthalion"><i class="fa fa-twitter fa-4x"></i></a>
+  </div>
+  {{> contact_form}}
 </div>
 
 <div id="goodbye"></div>
