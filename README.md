@@ -21,7 +21,7 @@ The current site is built using Sinatra
 * ~~responsive drop down menu~~ **Decided not to do**
 * ~~Vanilla/CSS smooth scrolling~~ **DONE**
 * style site
-    * Make menu highlight change as that section is on screen
+    * ~~Make menu highlight change as that section is on screen~~ **DONE**
     * make big links rotate on hover
         * make them a bit more clear (labels?)
     * add coloring to social links
