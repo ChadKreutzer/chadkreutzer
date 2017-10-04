@@ -1,5 +1,5 @@
 @import normalize
-@import url('https://fonts.googleapis.com/css?family=Alegreya|Oswald')
+@import url('https://fonts.googleapis.com/css?family=Sigmar+One|Oswald')
 
 =full-background 
   background-size: cover
@@ -31,19 +31,20 @@ a
     color: rgb(127, 118, 135)
   
 
-body, h1 small
+body,
   font-family: 'Ariel', sans-serif
 
 h1
   font-size: 3.5em
-  font-family: 'Alegreya', serif
+  font-family: 'Sigmar One', cursive
   @media only screen and (max-width: 360px)
     font-size: 3.3em
   @media only screen and (min-width: 768px)
     font-size: 5em
-  small
-    font-size: .33em
 
+h3
+  text-align: center
+  
 nav, h3, label, #submit
   font-family: 'Oswald', sans-serif
 
@@ -52,6 +53,7 @@ header
   top: 0
   width: 100%
   background-color: rgb(255, 255, 255)
+  z-index: 2
   nav
     display: flex
     justify-content: flex-end

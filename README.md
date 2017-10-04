@@ -14,17 +14,21 @@ The current site is built using Sinatra
 
 * Find node replacement for Jekyll for the blog
 * ~~Host static projects locally~~ **DONE**
+* Add reCaptcha to contact me form
 
 ## Current TODO
 
 * ~~flash notification on successful contact~~ **DONE**
-* ~~responsive drop down menu~~ **Decided not to do**
+* ~~responsive drop down menu~~
+    
+    **Decided not to do for now: the current menu looks just fine on mobile.
+    I will revisit this when I add the resume and blog**
 * ~~Vanilla/CSS smooth scrolling~~ **DONE**
-* style site
+* ~~style site~~ **DONE**
     * ~~Make menu highlight change as that section is on screen~~ **DONE**
-    * make big links rotate on hover
-        * make them a bit more clear (labels?)
-    * add coloring to social links
+    * ~~make big links rotate on hover~~ **Decided against: too busy**
+        * ~~make them a bit more clear (labels?)~~ **DONE**
+    * ~~add coloring to social links~~ **DONE**
 * Re-write about me
 * Add resume
 * redo logo
