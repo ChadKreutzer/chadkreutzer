@@ -12,7 +12,7 @@ The current site is built using Sinatra
 
 ## Planned changes from current site (besides node and express):
 
-* Find node replacement for Jekyll for the blog
+* ~~Find node replacement for Jekyll for the blog~~ **Decided to go with medium**
 * ~~Host static projects locally~~ **DONE**
 * Add reCaptcha to contact me form
 
@@ -20,7 +20,6 @@ The current site is built using Sinatra
 
 * ~~flash notification on successful contact~~ **DONE**
 * ~~responsive drop down menu~~
-    
     **Decided not to do for now: the current menu looks just fine on mobile.
     I will revisit this when I add the resume and blog**
 * ~~Vanilla/CSS smooth scrolling~~ **DONE**
