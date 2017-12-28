@@ -13,6 +13,7 @@ The current site is built using Sinatra
 ## Planned changes from current site (besides node and express):
 
 * ~~Find node replacement for Jekyll for the blog~~ **Decided to go with medium**
+* ~~Restyle site's overall appearance~~ **DONE**
 * ~~Host static projects locally~~ **DONE**
 * Add reCaptcha to contact me form
 
@@ -20,8 +21,7 @@ The current site is built using Sinatra
 
 * ~~flash notification on successful contact~~ **DONE**
 * ~~responsive drop down menu~~
-    **Decided not to do for now: the current menu looks just fine on mobile.
-    I will revisit this when I add the resume and blog**
+    **Decided not to do for now: the current menu looks just fine on mobile.**
 * ~~Vanilla/CSS smooth scrolling~~ **DONE**
 * ~~style site~~ **DONE**
     * ~~Make menu highlight change as that section is on screen~~ **DONE**
@@ -29,9 +29,8 @@ The current site is built using Sinatra
         * ~~make them a bit more clear (labels?)~~ **DONE**
     * ~~add coloring to social links~~ **DONE**
 * Re-write about me
-* Add resume
 * redo logo
 * move projects to database (maybe?)
 * publish to azure or aws
 * reCaptcha on contact form
-* implement new blog
+* ~~implement new blog~~ **Chose to do a medium publication**
