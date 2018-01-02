@@ -13,7 +13,7 @@ The current site is built using Sinatra
 ## Planned changes from current site (besides node and express):
 
 * ~~Find node replacement for Jekyll for the blog~~ **Decided to go with medium**
-* ~~Restyle site's overall appearance~~ **DONE**
+* ~~Re-style site's overall appearance~~ **DONE**
 * ~~Host static projects locally~~ **DONE**
 * Add reCaptcha to contact me form
 
@@ -33,4 +33,4 @@ The current site is built using Sinatra
 * move projects to database (maybe?)
 * publish to azure or aws
 * reCaptcha on contact form
-* ~~implement new blog~~ **Chose to do a medium publication**
+* ~~implement new blog~~ **DONE**
