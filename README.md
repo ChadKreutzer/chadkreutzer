@@ -34,3 +34,4 @@ The current site is built using Sinatra
 * publish to azure or aws
 * reCaptcha on contact form
 * ~~implement new blog~~ **DONE**
+* 
