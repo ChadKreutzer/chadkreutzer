@@ -28,7 +28,7 @@ The current site is built using Sinatra
     * ~~make big links rotate on hover~~ **Decided against: too busy**
         * ~~make them a bit more clear (labels?)~~ **DONE**
     * ~~add coloring to social links~~ **DONE**
-* Re-write about me
+* ~~Re-write about me~~ **DONE**
 * redo logo
 * move projects to database (maybe?)
 * publish to azure or aws
