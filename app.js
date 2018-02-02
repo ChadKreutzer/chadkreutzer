@@ -6,7 +6,6 @@ var cookieParser = require('cookie-parser');
 var sessions = require("express-session");
 var bodyParser = require('body-parser');
 var expressValidator = require('express-validator');
-var sassMiddleware = require('node-sass-middleware');
 var hbs = require('hbs');
 var md = require('./lib/markdown');
 const credentials = require('./credentials');
@@ -40,12 +39,6 @@ app.use(sessions({
   resave: false,
   saveUninitialized: false,
   secret: credentials.cookieSecret
-}));
-app.use(sassMiddleware({
-  src: path.join(__dirname, 'public'),
-  dest: path.join(__dirname, 'public'),
-  indentedSyntax: true, // true = .sass and false = .scss
-  sourceMap: true
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(function(req, res, next) {

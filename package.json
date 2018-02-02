@@ -29,7 +29,6 @@
     "hbs": "~4.0.1",
     "marked": "^0.3.6",
     "morgan": "~1.8.1",
-    "node-sass-middleware": "0.9.8",
     "nodemailer": "^4.0.1",
     "serve-favicon": "~2.4.2",
     "zenscroll": "^4.0.0"
