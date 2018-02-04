@@ -31,7 +31,7 @@ The current site is built using Sinatra
 * ~~Re-write about me~~ **DONE**
 * redo logo
 * move projects to database (maybe?)
-* publish to azure or aws
+* ~~publish to azure or aws~~ **Decided to publish to heroku instead**
 * reCaptcha on contact form
 * ~~implement new blog~~ **DONE**
 * 
