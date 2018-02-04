@@ -29,7 +29,7 @@ node_modules
 # Debug log from npm
 npm-debug.log
 
-# credentials.js
+credentials.js
 .c9
 
-chadkreutzer.zip
+.env

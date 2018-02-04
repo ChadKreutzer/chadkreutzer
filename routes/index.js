@@ -4,8 +4,7 @@ const { check, validationResult } = require('express-validator/check');
 const { matchedData } = require('express-validator/filter');
 const header = require('../lib/header');
 const projects = require('../lib/projects');
-const credentials = require('../credentials');
-const emailService = require('../lib/email')(credentials);
+const emailService = require('../lib/email')();
 
 const links = header();
 
@@ -43,12 +42,12 @@ router.post('/', [
         req.sanitizeBody('body').trim();
 
         const message = matchedData(req);
-        // emailService.send(
-        //     message.name,
-        //     message.email,
-        //     message.subject,
-        //     message.body
-        // );
+        emailService.send(
+            message.name,
+            message.email,
+            message.subject,
+            message.body
+        );
         
         res.locals.flash = {
             type: 'thanks',

@@ -8,7 +8,6 @@ var bodyParser = require('body-parser');
 var expressValidator = require('express-validator');
 var hbs = require('hbs');
 var md = require('./lib/markdown');
-const credentials = require('./credentials');
 var index = require('./routes/index');
 var projects = require('./routes/projects');
 
@@ -34,11 +33,11 @@ app.use(bodyParser.urlencoded({
   extended: false
 }));
 app.use(expressValidator());
-app.use(cookieParser(credentials.cookieSecret));
+app.use(cookieParser(process.env.COOKIE_SECRET));
 app.use(sessions({
   resave: false,
   saveUninitialized: false,
-  secret: credentials.cookieSecret
+  secret: process.env.COOKIE_SECRET
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(function(req, res, next) {
